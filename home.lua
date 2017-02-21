@@ -75,8 +75,6 @@ end
 
 function Home:getFocusedBtn()
     for _, button in pairs(self.buttons) do
-        print(button.focused);
-        print(button.image_path);
         if (button.focused) then
             return button 
         end
