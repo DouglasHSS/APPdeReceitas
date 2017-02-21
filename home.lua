@@ -55,7 +55,7 @@ function Home:settingButtons()
     
     self.buttons[2].above = self.buttons[1]
     self.buttons[2].below = self.buttons[3]
-    self.buttons[2].page  = Pages.pasta
+    self.buttons[2].page  = Pages.pastas
     
     self.buttons[3].above = self.buttons[2]
     self.buttons[3].below = self.buttons[4]
