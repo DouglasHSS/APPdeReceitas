@@ -1,8 +1,8 @@
 -- Definindo meta tabela de uma Seção que recibe
 -- varias receitas a serem escolhida
-local Section   = {} ;
+local Page   = {} ;
 
-function Section:new(o)
+function Page:new(o)
     o = o or {}
     setmetatable (o, self)
     self.__index = self
@@ -10,23 +10,30 @@ function Section:new(o)
 end
 
 
-function Section:show(containerApp)
+function Page:show(containerApp)
     containerApp:clear()
     containerApp:attrColor(0, 147, 215, 255);
     containerApp:drawRect("fill", 0, 0, containerApp:attrSize());
   
     self:renderReceiptButtons(containerApp);
     self:renderTitle(containerApp);
+    self:renderControls(containerApp);
 end
 
 
-function Section:renderTitle(containerApp)
+function Page:renderTitle(containerApp)
     header_title = canvas:new(self.header_img_path);
     containerApp:compose(450, 25, header_title);
 end
 
 
-function Section:renderReceiptButtons(containerApp)
+function Page:renderControls(containerApp)
+    img_controls = canvas:new("media/controles_secao.png");
+    containerApp:compose(33, 675, img_controls);
+end
+
+
+function Page:renderReceiptButtons(containerApp)
     self:settingButtons();
     
     x, y = 50, 150
@@ -39,7 +46,7 @@ function Section:renderReceiptButtons(containerApp)
 end
 
 
-function Section:listener(evt)
+function Page:listener(evt)
     if (evt.class == "key") then
         focusedBtn = self:getFocusedBtn()
         focusedBtn:listener(evt)
@@ -47,7 +54,7 @@ function Section:listener(evt)
 end
 
 
-function Section:getFocusedBtn()
+function Page:getFocusedBtn()
     for _, button in pairs(self.buttons) do
         if (button.focused) then
             return button 
@@ -56,4 +63,4 @@ function Section:getFocusedBtn()
 end
 
 
-return Section
+return Page

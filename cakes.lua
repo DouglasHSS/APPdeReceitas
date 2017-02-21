@@ -1,9 +1,9 @@
 utils = require "utils";
 Button = require "Button";
-Section = require "Section";
+Page = require "Page";
 
 -- Definindo Tela de Bolos
-local Cakes   = utils:inheritsFrom(Section);
+local Cakes   = utils:inheritsFrom(Page);
 Cakes.buttons = {Button:new({image_path="media/imagens_receita/bolos/bolo_ceneoura.png", focused=true}),
                  Button:new({image_path="media/imagens_receita/bolos/bolo_chocolate.png"})};
 Cakes.header_img_path = "media/imagens_receita/bolos/bolos_titulo.png";

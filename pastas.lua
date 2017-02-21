@@ -1,9 +1,9 @@
 utils = require "utils";
 Button = require "Button";
-Section = require "Section";
+Page = require "Page";
 
 -- Definindo Tela de Massas
-local Pastas   = utils:inheritsFrom(Section);
+local Pastas   = utils:inheritsFrom(Page);
 Pastas.buttons = {Button:new({image_path="media/imagens_receita/massas/macarrao.png", focused=true})};
 Pastas.header_img_path = "media/imagens_receita/massas/massas_titulo.png";
 

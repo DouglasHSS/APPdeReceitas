@@ -1,21 +1,14 @@
+utils  = require "utils";
+Page   = require "Page";
 Button = require "Button";
 
 -- Definindo meta tabela de uma Botão
-local Home   = {} ;
-Home.title   = "home";
+local Home   = utils:inheritsFrom(Page);
 Home.buttons = {Button:new({image_path="media/cakes_btn.png", focused=true}),
                 Button:new({image_path="media/pastas_btn.png"}),
                 Button:new({image_path="media/soups_btn.png"}),
                 Button:new({image_path="media/desserts_btn.png"}),
                 Button:new({image_path="media/snacks_btn.png"})};
-
-
-function Home:new(o)
-    o = o or {}
-    setmetatable (o, self)
-    self.__index = self
-    return o
-end
 
 
 function Home:show(containerApp)
@@ -67,23 +60,6 @@ function Home:settingButtons()
     
     self.buttons[5].above = self.buttons[4]
     self.buttons[5].page  = Pages.snacks
-end
-
-
-function Home:listener(evt)
-    if (evt.class == "key") then
-        focusedBtn = self:getFocusedBtn()
-        focusedBtn:listener(evt)
-    end
-end
-
-
-function Home:getFocusedBtn()
-    for _, button in pairs(self.buttons) do
-        if (button.focused) then
-            return button 
-        end
-    end
 end
 
 

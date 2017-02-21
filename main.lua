@@ -10,7 +10,7 @@ function runApp(evt)
 
 	  canvas:attrColor(0, 156, 228, 255);
     canvas:drawRect("fill", 0, 0, canvas:attrSize());
-    containerApp = canvas:new(1299, 703);
+    containerApp = canvas:new(1299, 725);
 
      if (CURRENT_PAGE == nil) then
         CURRENT_PAGE = Pages.home; 

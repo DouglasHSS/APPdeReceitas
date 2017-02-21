@@ -1,9 +1,9 @@
 utils = require "utils";
 Button = require "Button";
-Section = require "Section";
+Page = require "Page";
 
 -- Definindo Tela de Sobremesas
-local Desserts   = utils:inheritsFrom(Section);
+local Desserts   = utils:inheritsFrom(Page);
 Desserts.buttons = {Button:new({image_path="media/imagens_receita/sobremesas/baba_de_moca.png", focused=true}),
                     Button:new({image_path="media/imagens_receita/sobremesas/brigadeiro.png"}),
                     Button:new({image_path="media/imagens_receita/sobremesas/queijadinha.png"})};

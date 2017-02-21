@@ -1,9 +1,9 @@
 utils = require "utils";
 Button = require "Button";
-Section = require "Section";
+Page = require "Page";
 
 -- Definindo Tela de Lanches
-local Snacks   = utils:inheritsFrom(Section);
+local Snacks   = utils:inheritsFrom(Page);
 Snacks.buttons = {Button:new({image_path="media/imagens_receita/lanches/hamburguer.png", focused=true}),
                   Button:new({image_path="media/imagens_receita/lanches/sanduiche_de_forno.png"})};
 Snacks.header_img_path = "media/imagens_receita/lanches/lanches_titulo.png";
