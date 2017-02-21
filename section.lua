@@ -20,6 +20,12 @@ function Section:show(containerApp)
 end
 
 
+function Section:renderTitle(containerApp)
+    header_title = canvas:new(self.header_img_path);
+    containerApp:compose(450, 25, header_title);
+end
+
+
 function Section:renderReceiptButtons(containerApp)
     self:settingButtons();
     
