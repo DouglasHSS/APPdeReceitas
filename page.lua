@@ -1,5 +1,4 @@
--- Definindo meta tabela de uma Seção que recibe
--- varias receitas a serem escolhida
+-- Definindo meta tabela de uma Página
 local Page   = {} ;
 
 function Page:new(o)

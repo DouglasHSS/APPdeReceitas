@@ -1,10 +1,23 @@
-Home, Cakes, Pastas = require "Home", require "Cakes", require  "Pastas";
-Soups, Desserts, Snacks =  require "Soups", require  "Desserts", require  "Snacks";
+Home     = require "Home"; 
+Cakes    = require "Cakes"; 
+Pastas   = require "Pastas";
+Soups    = require "Soups"; 
+Desserts = require "Desserts"; 
+Snacks   = require "Snacks";
+Receipts = require "Receipts";
 
-Pages = {home = Home:new(), cakes = Cakes:new(), pastas = Pastas:new(),
-         soups = Soups:new(), desserts = Desserts:new(), snacks = Snacks:new()};
+
+Pages = {home     = Home:new(),
+         cakes    = Cakes:new(),
+         pastas   = Pastas:new(),
+         soups    = Soups:new(),
+         desserts = Desserts:new(),
+         snacks   = Snacks:new(),
+         receipts = Receipts:new()};
+
 
 CURRENT_PAGE, LAST_PAGE = nil, nil;
+
 
 function runApp(evt)
 
