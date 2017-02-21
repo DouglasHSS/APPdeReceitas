@@ -51,17 +51,22 @@ end
 
 function Home:settingButtons()
     self.buttons[1].below = self.buttons[2]
+    self.buttons[1].page  = Pages.cakes
     
     self.buttons[2].above = self.buttons[1]
     self.buttons[2].below = self.buttons[3]
+    self.buttons[2].page  = Pages.pasta
     
     self.buttons[3].above = self.buttons[2]
     self.buttons[3].below = self.buttons[4]
+    self.buttons[3].page  = Pages.soups
     
     self.buttons[4].above = self.buttons[3]
     self.buttons[4].below = self.buttons[5]
+    self.buttons[4].page  = Pages.desserts
     
-    self.buttons[5].above = self.buttons[4]  
+    self.buttons[5].above = self.buttons[4]
+    self.buttons[5].page  = Pages.snacks
 end
 
 

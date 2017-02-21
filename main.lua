@@ -1,6 +1,8 @@
-Home = require "Home";
+Home  = require "Home";
+Cakes = require "Cakes";
 
-Pages = {home=Home:new()};
+Pages = {home     = Home:new(),
+         cakes    = Cakes:new()};
 
 CURRENT_PAGE = nil;
 LAST_PAGE = nil;
@@ -20,12 +22,14 @@ end
 
 function flowController(evt, containerApp)
     if (CURRENT_PAGE == nil) then
-        Pages.home:show(containerApp);
-        CURRENT_PAGE = Pages.home.title; 
-    elseif (CURRENT_PAGE == Pages.home.title) then
+        CURRENT_PAGE = Pages.home; 
+    elseif (CURRENT_PAGE == Pages.home) then
         Pages.home:listener(evt);
-        Pages.home:show(containerApp);
+    elseif (CURRENT_PAGE == Pages.cakes) then
+        Pages.cakes:listener(evt);
     end
+
+    CURRENT_PAGE:show(containerApp);
 end
 
 

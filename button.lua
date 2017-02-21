@@ -7,7 +7,7 @@ Button.onTheLeft   = nil;
 Button.above       = nil;
 Button.onTheRight  = nil;
 Button.bellow      = nil;
-Button.name_page   = nil;
+Button.page        = nil;
 
 
 function Button:new(o)
@@ -54,8 +54,8 @@ function Button:listener(evt)
     elseif (evt.key == "CURSOR_DOWN")  and (self.below ~= nil)  then
         self.below:setFocused();
         self:disableFocus();
-    elseif (evt.key == "ENTER") then
-        a=1;
+    elseif (evt.key == "ENTER") and (self.page ~= nil) then
+        CURRENT_PAGE = self.page;
     end
     
 end
