@@ -3,11 +3,11 @@ Button = require "Button";
 -- Definindo meta tabela de uma Botão
 local Home   = {} ;
 Home.title   = nil;
-Home.buttons = {cakes_btn    = Button:new({image_path="media/cakes_btn.png", focused=true}),
-                pastas_btn   = Button:new({image_path="media/pastas_btn.png"}),
-                soups_btn    = Button:new({image_path="media/soups_btn.png"}),
-                desserts_btn = Button:new({image_path="media/desserts_btn.png"}),
-                snacks_btn   = Button:new({image_path="media/snacks_btn.png"})};
+Home.buttons = {Button:new({image_path="media/cakes_btn.png", focused=true}),
+                Button:new({image_path="media/pastas_btn.png"}),
+                Button:new({image_path="media/soups_btn.png"}),
+                Button:new({image_path="media/desserts_btn.png"}),
+                Button:new({image_path="media/snacks_btn.png"})};
 
 
 function Home:new(o)
@@ -50,18 +50,18 @@ end
 
 
 function Home:settingButtons()
-    self.buttons.cakes_btn.below = self.buttons.pastas_btn
+    self.buttons[1].below = self.buttons[2]
     
-    self.buttons.pastas_btn.above  = self.buttons.cakes_btn
-    self.buttons.pastas_btn.bellow = self.buttons.soups_btn
+    self.buttons[2].above = self.buttons[1]
+    self.buttons[2].below = self.buttons[3]
     
-    self.buttons.soups_btn.above   = self.buttons.pastas_btn
-    self.buttons.soups_btn.bellow  = self.buttons.desserts_btn
+    self.buttons[3].above = self.buttons[2]
+    self.buttons[3].below = self.buttons[4]
     
-    self.buttons.desserts_btn.above  = self.buttons.soups_btn
-    self.buttons.desserts_btn.bellow = self.buttons.snacks_btn
+    self.buttons[4].above = self.buttons[3]
+    self.buttons[4].below = self.buttons[5]
     
-    self.buttons.snacks_btn.above = self.buttons.desserts_btn  
+    self.buttons[5].above = self.buttons[4]  
 end
 
 
