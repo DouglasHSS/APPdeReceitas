@@ -4,8 +4,8 @@ Button = require "Button";
 
 -- Definindo meta tabela de uma Botão
 local Home   = utils:inheritsFrom(Page);
-Home.buttons = {Button:new({image_path="media/cakes_btn.png", focused=true}),
-                Button:new({image_path="media/pastas_btn.png"}),
+Home.buttons = {Button:new({image_path="media/cakes_btn.png"}),
+                Button:new({image_path="media/pastas_btn.png", focused=true}),
                 Button:new({image_path="media/soups_btn.png"}),
                 Button:new({image_path="media/desserts_btn.png"}),
                 Button:new({image_path="media/snacks_btn.png"})};

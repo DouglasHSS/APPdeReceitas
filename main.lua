@@ -4,7 +4,6 @@ Pastas   = require "Pastas";
 Soups    = require "Soups"; 
 Desserts = require "Desserts"; 
 Snacks   = require "Snacks";
-Receipts = require "Receipts";
 
 
 Pages = {home     = Home:new(),
@@ -12,8 +11,7 @@ Pages = {home     = Home:new(),
          pastas   = Pastas:new(),
          soups    = Soups:new(),
          desserts = Desserts:new(),
-         snacks   = Snacks:new(),
-         receipts = Receipts:new()};
+         snacks   = Snacks:new()};
 
 
 CURRENT_PAGE, LAST_PAGE = nil, nil;

@@ -9,7 +9,8 @@ Pastas.header_img_path = "media/imagens_receita/massas/massas_titulo.png";
 
 
 function Pastas:settingButtons()
-
+    
+    self.buttons[1].page = ReceiptPage:new({receipt=ReceiptsTable.macarrao});
 end
 
 

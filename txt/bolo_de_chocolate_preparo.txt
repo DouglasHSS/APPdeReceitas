@@ -1,13 +1,10 @@
-MASSA:
+MASSA
+Em um liquidificador adicione os ovos, o chocolate em po, a manteiga, a farinha de trigo,
+o doce e o leite, depois bata por 5 minutos
+Adicione o fermento e misture com uma espatula delicadamente
+Em uma forma untada, despeje a massa e asse em forno medio 180C, preaquecido por cerca de 40 minutos
 
-Em um liquidificador adicione os ovos, o chocolate em pó, a manteiga, a farinha de trigo,
-o açúcar e o leite, depois bata por 5 minutos
-Adicione o fermento e misture com uma espátula delicadamente
-Em uma forma untada, despeje a massa e asse em forno médio 180 ºC, preaquecido por cerca
-de 40 minutos
-
-CALDA:
-
-Em uma panela, aqueça a manteiga e misture o chocolate em pó até que esteja homogêneo
-Acrescente o creme de leite e misture bem até obter uma consistência cremosa
-Desligue o fogo e acrescente o açúcar
+CALDA
+Em uma panela, aqueca a manteiga e misture o chocolate em po ate que esteja homogeneo
+Acrescente o creme de leite e misture bem ate obter uma consistencia cremosa
+Desligue o fogo e acrescente o doce

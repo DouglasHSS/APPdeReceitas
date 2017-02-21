@@ -26,7 +26,7 @@ function Receipts:show(containerApp)
   
     self:renderTitle(containerApp);
     self:renderIngredients(containerApp);
---    self:renderCooking(containerApp);
+    self:renderCooking(containerApp);
     self:renderControls(containerApp);
 end
 
@@ -37,21 +37,40 @@ function Receipts:renderTitle(containerApp)
 end
 
 function Receipts:renderIngredients(containerApp)
-    ingredientsCanvas = canvas:new(560,380);
+    ingredientsCanvas = canvas:new(560,305);
     ingredientsCanvas:attrColor(0, 135, 198, 255);
-    ingredientsCanvas:drawRect("fill", 0, 0, containerApp:attrSize());
+    ingredientsCanvas:drawRect("fill", 0, 0, ingredientsCanvas:attrSize());
    
-    ingredientsCanvas:attrFont("Tiresias", 18, "bold");
+    ingredientsCanvas:attrFont("Tiresias", 17, "bold");
     ingredientsCanvas:attrColor(255,255,255,255);
     ingredientsCanvas:drawText(190, 5, "Ingredientes");
    
-    ingredientsCanvas:attrFont("Tiresias", 14, "bold");
+    ingredientsCanvas:attrFont("Tiresias", 13, "bold");
     y = 40;
     for line in io.lines(self.receipt.ingredients) do
         ingredientsCanvas:drawText(15, y, tostring(line));
         y = y + 20
     end
     containerApp:compose(30, 100, ingredientsCanvas);
+end
+
+
+function Receipts:renderCooking(containerApp)
+    cookingCanvas = canvas:new(1239, 260);
+    cookingCanvas:attrColor(0, 135, 198, 255);
+    cookingCanvas:drawRect("fill", 0, 0, cookingCanvas:attrSize());
+   
+    cookingCanvas:attrFont("Tiresias", 17, "bold");
+    cookingCanvas:attrColor(255,255,255,255);
+    cookingCanvas:drawText(190, 5, "Modo de Preparo");
+   
+    cookingCanvas:attrFont("Tiresias", 13, "bold");
+    y = 40;
+    for line in io.lines(self.receipt.cooking) do
+        cookingCanvas:drawText(15, y, tostring(line));
+        y = y + 20
+    end
+    containerApp:compose(30, 410, cookingCanvas);
 end
 
 
