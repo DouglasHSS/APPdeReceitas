@@ -1,6 +1,8 @@
 utils = require "utils";
 Button = require "Button";
 Page = require "Page";
+ReceiptPage   = require "Receipts";
+ReceiptsTable = require "ReceiptsTable";
 
 -- Definindo Tela de Massas
 local Pastas   = utils:inheritsFrom(Page);
@@ -9,7 +11,6 @@ Pastas.header_img_path = "media/imagens_receita/massas/massas_titulo.png";
 
 
 function Pastas:settingButtons()
-    
     self.buttons[1].page = ReceiptPage:new({receipt=ReceiptsTable.macarrao});
 end
 
