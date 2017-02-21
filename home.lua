@@ -2,7 +2,7 @@ Button = require "Button";
 
 -- Definindo meta tabela de uma Botão
 local Home   = {} ;
-Home.title   = nil;
+Home.title   = "home";
 Home.buttons = {Button:new({image_path="media/cakes_btn.png", focused=true}),
                 Button:new({image_path="media/pastas_btn.png"}),
                 Button:new({image_path="media/soups_btn.png"}),
@@ -62,6 +62,25 @@ function Home:settingButtons()
     self.buttons[4].below = self.buttons[5]
     
     self.buttons[5].above = self.buttons[4]  
+end
+
+
+function Home:listener(evt)
+    if (evt.class == "key") then
+        focusedBtn = self:getFocusedBtn()
+        focusedBtn:listener(evt)
+    end
+end
+
+
+function Home:getFocusedBtn()
+    for _, button in pairs(self.buttons) do
+        print(button.focused);
+        print(button.image_path);
+        if (button.focused) then
+            return button 
+        end
+    end
 end
 
 

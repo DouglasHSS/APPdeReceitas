@@ -1,6 +1,6 @@
 Home = require "Home";
 
-Pages = {home="home"};
+Pages = {home=Home:new()};
 
 CURRENT_PAGE = nil;
 LAST_PAGE = nil;
@@ -19,19 +19,13 @@ function runApp(evt)
 end
 
 function flowController(evt, containerApp)
-
     if (CURRENT_PAGE == nil) then
-        Home:show(containerApp);
-        CURRENT_PAGE = "home"; 
-    elseif ( evt.class == "key" ) then
-      
-      else if (CURRENT_PAGE == Pages.home) then
-          home = Home:new();
-          home:listener(evt);
-      end
-        
+        Pages.home:show(containerApp);
+        CURRENT_PAGE = Pages.home.title; 
+    elseif (CURRENT_PAGE == Pages.home.title) then
+        Pages.home:listener(evt);
+        Pages.home:show(containerApp);
     end
-
 end
 
 
