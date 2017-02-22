@@ -18,6 +18,10 @@ function Receipts:setReceipt(receipt)
     return self
 end
 
+function Receipts:listener(evt)
+    -- Não possui Botões para serem escutados.
+end
+
 
 function Receipts:show(containerApp)
     containerApp:clear()

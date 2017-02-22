@@ -14,7 +14,7 @@ Pages = {home     = Home:new(),
          snacks   = Snacks:new()};
 
 
-CURRENT_PAGE, LAST_PAGE = nil, nil;
+CURRENT_PAGE, LAST_PAGE = nil, {};
 
 
 function runApp(evt)
@@ -27,7 +27,7 @@ function runApp(evt)
         CURRENT_PAGE = Pages.home; 
      else
         if (evt.key == "BLUE")then
-            CURRENT_PAGE = LAST_PAGE;
+            CURRENT_PAGE = table.remove(LAST_PAGE);
         elseif (evt.key == "RED")then
             local evtAtt = { class = 'ncl', type = 'attribution', name = 'stop', value="stop" }
             evtAtt.action = "start" 

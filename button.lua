@@ -55,12 +55,11 @@ function Button:listener(evt)
         self.below:setFocused();
         self:disableFocus();
     elseif (evt.key == "ENTER") and (self.page ~= nil) then
-        LAST_PAGE = CURRENT_PAGE;
+        table.insert(LAST_PAGE, CURRENT_PAGE);
         CURRENT_PAGE = self.page;
     end
     
 end
-
 
 return Button
 
