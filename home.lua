@@ -18,6 +18,7 @@ function Home:show(containerApp)
   
     self:renderMenu(containerApp);
     self:renderImages(containerApp);
+    self:renderControls(containerApp);
 end
 
 
@@ -39,6 +40,13 @@ function Home:renderImages(containerApp)
     image_home  = canvas:new("media/image_home.png");
     containerApp:compose(510, 50, header_home);
     containerApp:compose(420, 150, image_home);
+end
+
+
+function Home:renderControls(containerApp)
+    img_controls = canvas:new("media/controles_secao.png");
+    img_controls:attrCrop(0, 0, 152, 35);
+    containerApp:compose(33, 675, img_controls);
 end
 
 

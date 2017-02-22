@@ -76,7 +76,7 @@ end
 
 function Receipts:renderControls(containerApp)
     img_controls = canvas:new("media/controles_secao.png");
-    img_controls:attrCrop(0, 0, 133, 35);
+    img_controls:attrCrop(152, 0, 133, 35);
     containerApp:compose(33, 675, img_controls);
 end
 

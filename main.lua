@@ -29,7 +29,11 @@ function runApp(evt)
         if (evt.key == "BLUE")then
             CURRENT_PAGE = LAST_PAGE;
         elseif (evt.key == "RED")then
-            CURRENT_PAGE = LAST_PAGE;
+            local evtAtt = { class = 'ncl', type = 'attribution', name = 'stop', value="stop" }
+            evtAtt.action = "start" 
+            event.post(evtAtt);
+            evtAtt.action = "stop" 
+            event.post(evtAtt);
         else
             CURRENT_PAGE:listener(evt);
         end

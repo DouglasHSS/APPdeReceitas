@@ -7,9 +7,21 @@
         <descriptorBase>
             <descriptor id="descritor01" region="regiao01"/>
         </descriptorBase>
+        <connectorBase>
+            <causalConnector id="onEndAttStop">
+                <simpleCondition role="onEndAttribution" />
+                <simpleAction role="stop"/>
+            </causalConnector>
+        </connectorBase>
     </head>
     <body>
         <port id="port01" component="media01"/>
-        <media id="media01" descriptor="descritor01" src="main.lua" type="application/x-ginga-NCLua"/>
+        <media id="media01" descriptor="descritor01" src="main.lua" type="application/x-ginga-NCLua">
+            <property name="stop"/>        	
+        </media>
+        <link xconnector="onEndAttStop">
+            <bind role="onEndAttribution" component="media01" interface="stop"/>
+            <bind role="stop" component="media01"/>
+        </link>
     </body>
 </ncl>
