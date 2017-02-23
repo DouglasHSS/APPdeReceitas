@@ -28,16 +28,18 @@ function Receipts:show(containerApp)
     containerApp:attrColor(0, 147, 215, 255);
     containerApp:drawRect("fill", 0, 0, containerApp:attrSize());
   
-    self:renderTitle(containerApp);
+    self:renderImages(containerApp);
     self:renderIngredients(containerApp);
     self:renderCooking(containerApp);
     self:renderControls(containerApp);
 end
 
 
-function Receipts:renderTitle(containerApp)
+function Receipts:renderImages(containerApp)
     header_title = canvas:new(self.receipt.receipt_title);
     containerApp:compose(325, 25, header_title);
+    image_dish = canvas:new(self.receipt.receipt_image);
+    containerApp:compose(595, 100, image_dish);
 end
 
 function Receipts:renderIngredients(containerApp)
